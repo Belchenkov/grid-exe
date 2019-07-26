@@ -6,7 +6,12 @@ global.$ = {
     imageminJpegRecompress: require('imagemin-jpeg-recompress'),
     pngquant: require('imagemin-pngquant'),
     path: {
+        config: require('./gulp/config.js'),
         jquery: './js/jquery.js',
         js: './js/**/*.js'
     }
 };
+
+$.path.config.forEach(function (path) {
+    require(path)();
+});

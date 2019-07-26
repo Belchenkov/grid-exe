@@ -5,7 +5,7 @@ module.exports = function () {
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass())
             .pipe($.gp.autoprefixer({
-                browsers: ['last 2 versions']
+                overrideBrowserslist: ['last 2 versions']
             }))
             .pipe($.gp.csso())
             .pipe($.gp.rename('style.min.css'))
