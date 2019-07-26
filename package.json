@@ -1,12 +1,12 @@
 {
-  "name": "grid-block1",
+  "name": "grid-block",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Aleksey Belchenkov",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
