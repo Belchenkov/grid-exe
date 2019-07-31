@@ -1,0 +1,105 @@
+$circleBg: #363636;
+$iconBg: #636363;
+$colorTitle: #636363;
+$colorText: #555555;
+
+.advantages {
+  &__title {
+    @include visually-hidden;
+  }
+
+  &__list {
+    padding-top: 65px;
+    padding-bottom: 50px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    grid-column-gap: 30px;
+  }
+
+  &__item {
+    margin: 15px 0;
+
+    &:hover {
+      .advantages__img {
+        border-color: $second;
+      }
+
+      .advantages__svg {
+        fill: $second;
+      }
+
+      .advantages__subtitle {
+        color: $second;
+      }
+
+      .advantages__text {
+        color: $white;
+      }
+    }
+  }
+
+  &__img {
+    border: 1px solid $circleBg;
+    border-radius: 50%;
+    position: relative;
+    width: 104px;
+    height: 104px;
+    transition: all .5s ease-in-out;
+  }
+
+  &__svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    fill: $iconBg;
+    transition: all .5s ease-in-out;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    color: $colorTitle;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.111;
+    margin: 20px 0;
+    transition: all .5s ease-in-out;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.429;
+    color: $colorText;
+    transition: all .5s ease-in-out;
+
+    &::after {
+      background-color: $second;
+      width: 70px;
+      height: 2px;
+      content: '';
+      display: block;
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .advantages {
+    &__list {
+      padding-top: 30px;
+      padding-bottom: 25px;
+    }
+
+    &__item {
+      text-align: center;
+    }
+
+    &__img {
+      margin: 0 auto;
+    }
+  }
+}
