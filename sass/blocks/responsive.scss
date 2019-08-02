@@ -1,0 +1,78 @@
+$lineColor: #2f2f2f;
+$responsiveText: #464646;
+
+.responsive {
+  &__wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url("../img/bg-two.png") no-repeat left bottom;
+  }
+
+  &__information {
+    max-width: 360px;
+    margin-left: auto;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 20px 0;
+    position: relative;
+
+    &::before {
+      background: $lineColor;
+      position: absolute;
+      width: 70px;
+      height: 2px;
+      left: 0;
+      top: -20px;
+      content: '';
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $responsiveText;
+    line-height: 1.429;
+    margin: 20px 0;
+  }
+
+  &__list {
+    margin: 20px 0;
+  }
+
+  &__button {
+    @include button($thirty) {
+      margin-top: 50px;
+    };
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive {
+    &__wrap {
+      background-image: none;
+    }
+
+    &__information {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive {
+    &__wrap {
+      padding-top: 50px;
+    }
+
+    &__information {
+      margin-left: 0;
+    }
+  }
+}
