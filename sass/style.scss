@@ -1,11 +1,13 @@
 @charset "UTF-8";
 
+// Config
 @import "normalize";
 @import "variables";
 @import "fonts";
 @import "mixins";
 @import "core";
 
+// Partials
 @import "blocks/header";
 @import "blocks/menu";
 @import "blocks/banner";
@@ -13,4 +15,6 @@
 @import "blocks/works";
 @import "blocks/responsive";
 @import "blocks/list";
+@import "blocks/skills";
+@import "blocks/progress";
 
