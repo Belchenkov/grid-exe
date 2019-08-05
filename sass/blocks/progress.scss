@@ -23,6 +23,7 @@
   }
 
   &__tooltip {
+    display: none;
     background: $primary;
     position: absolute;
     right: -15px;
