@@ -1,0 +1,80 @@
+.progress {
+  &__name {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.429;
+    margin: 10px 0;
+  }
+
+  &__element {
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 3px;
+    padding: 2px;
+  }
+
+  &__line {
+    background: $white;
+    width: 0;
+    height: 4px;
+    position: relative;
+  }
+
+  &__tooltip {
+    display: none;
+    background: $primary;
+    position: absolute;
+    right: -15px;
+    top: -32px;
+    width: 31px;
+    font-size: 11px;
+    color: $white;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 3px;
+
+    &::before {
+      content: '';
+      border: 4px solid transparent;
+      border-top: 4px solid $primary;
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .skills {
+    &__left {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    &__wrap {
+      flex-direction: column;
+    }
+
+    &__left {
+      margin-right: 0;
+      margin-bottom: 25px;
+      flex-basis: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    &__wrap {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
